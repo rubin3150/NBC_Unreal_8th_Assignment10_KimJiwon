@@ -59,11 +59,13 @@ void AAssignment10Character::BeginPlay()
 {
 	Super::BeginPlay();
 
+	// Test 모듈에 정의된 ATestActor를 캐릭터 정면 200 유닛 위치에 스폰
 	if (GetWorld())
 	{
 		ATestActor* Spawned = GetWorld()->SpawnActor<ATestActor>(
 			ATestActor::StaticClass(), GetActorLocation() + GetActorForwardVector() * 200.f, FRotator::ZeroRotator);
 
+		// 스폰 성공 시 화면에 확인 메시지 출력
 		if (Spawned && GEngine)
 		{
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green,TEXT("TestActor Spawned!"));

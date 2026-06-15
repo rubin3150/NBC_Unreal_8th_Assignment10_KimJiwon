@@ -15,7 +15,8 @@ ATestActor::ATestActor()
 void ATestActor::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	// 액터가 정상적으로 스폰되어 BeginPlay까지 도달했는지 확인용 로그
 	UE_LOG(LogTemp, Warning, TEXT("TestActor BeginPlay"));
 }
 
